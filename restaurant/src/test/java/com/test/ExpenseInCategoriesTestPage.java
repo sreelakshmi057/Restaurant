@@ -39,7 +39,7 @@ public class ExpenseInCategoriesTestPage extends AutomationBase {
 		soft.assertAll();
 	}
 
-	@Test(priority = 31, enabled = true)
+	@Test(priority = 31, enabled = true, retryAnalyzer = com.analyzer.RetryAnalyzer.class)
 	public void validateTheEnteredCategoryValues_AfterClickingAddCustomerButtonInExpensePageInCategoryLink() {
 		loginpg = new LoginPage(driver);
 		propUtil = new PropertyUtilities();

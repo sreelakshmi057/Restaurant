@@ -24,7 +24,6 @@ public class LoginPageTest extends AutomationBase {
 		propUtil = new PropertyUtilities();
 		prop = PropertyUtilities.getProperty("config.properties");
 		loginpg.performLogin(prop.getProperty("username"), prop.getProperty("password"));
-		System.out.println("Check");
 		Assert.assertTrue(homepg.isProductLinkDisplayed(), AutomationConstants.loginCheck);
 	}
 
