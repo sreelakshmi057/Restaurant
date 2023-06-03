@@ -65,9 +65,9 @@ public class ExpensePage {
 	private WebElement expenseConfirmDeleteOkButton;
 
 	public void clickOnAddExpenseButton() {
-		actionUtil.clickElement(driver, addExpenseButton);
+		actionUtil.clickElement(addExpenseButton);
 		waitUtil.waitForElementTobeClickable(driver, expenseDate, 20);
-		actionUtil.clickElement(driver, expenseDate);
+		actionUtil.clickElement(expenseDate);
 	}
 
 	public void implementImplicitWait() {
@@ -109,27 +109,27 @@ public class ExpensePage {
 	 * @param value
 	 */
 	public void enterValueToExpenseDate(String value) {
-		actionUtil.clearText(driver, expenseDate);
+		actionUtil.clearText(expenseDate);
 		actionUtil.enterValue(driver, expenseDate, value);
 	}
 
 	public void enterValueToExpenseReference(String value) {
-		actionUtil.clearText(driver, expenseReference);
+		actionUtil.clearText(expenseReference);
 		actionUtil.enterValue(driver, expenseReference, value);
 	}
 
 	public void enterValueToExpenseAmount(String value) {
-		actionUtil.clearText(driver, expenseAmount);
+		actionUtil.clearText(expenseAmount);
 		actionUtil.enterValue(driver, expenseAmount, value);
 	}
 
 	public void enterValueToExpenseDescription(String value) {
-		actionUtil.clearText(driver, expenseDescription);
+		actionUtil.clearText(expenseDescription);
 		actionUtil.enterValue(driver, expenseDescription, value);
 	}
 
 	public void clickOnExpenseSubmitButton() {
-		actionUtil.clickElement(driver, expenseSubmitButton);
+		actionUtil.clickElement(expenseSubmitButton);
 	}
 
 	/**
@@ -138,12 +138,12 @@ public class ExpensePage {
 	 * @param value
 	 */
 	public void selectExpenseStoreByVisibleText(String value) {
-		actionUtil.clearText(driver, expenseStore);
+		actionUtil.clearText(expenseStore);
 		genericUtil.SelectElementByVisibleText(driver, expenseStore, value);
 	}
 
 	public void selectExpenseCategoryByVisibleText(String value) {
-		actionUtil.clearText(driver, expenseCategory);
+		actionUtil.clearText(expenseCategory);
 		genericUtil.SelectElementByVisibleText(driver, expenseCategory, value);
 	}
 
@@ -154,7 +154,7 @@ public class ExpensePage {
 	 */
 	public void searchForExpenseValue(String value) {
 		waitUtil.waitForElementTobeClickable(driver, expenseSearch, 5);
-		actionUtil.clickElement(driver, expenseSearch);
+		actionUtil.clickElement(expenseSearch);
 		actionUtil.enterValue(driver, expenseSearch, value);
 		waitUtil.waitForVisibilityOfElement(driver, expensedelete_SearchResult, 25);
 
@@ -196,12 +196,12 @@ public class ExpensePage {
 	 */
 
 	public void clickOnExpenseEditIcon() {
-		actionUtil.clickElement(driver, expenseEditButton);
+		actionUtil.clickElement(expenseEditButton);
 	}
 
 	public void clickOnExpenseEditSubmitButton() {
 		waitUtil.waitForElementTobeClickable(driver, expenseEditSubmitButton, 10);
-		actionUtil.clickElement(driver, expenseEditSubmitButton);
+		actionUtil.clickElement(expenseEditSubmitButton);
 	}
 
 	/**
@@ -210,16 +210,16 @@ public class ExpensePage {
 	 */
 	public void clickOnExpenseDeleteIcon() {
 		waitUtil.waitForVisibilityOfElement(driver, expensedelete_SearchResult, 25);
-		actionUtil.clickElement(driver, expenseDeleteButton);
+		actionUtil.clickElement(expenseDeleteButton);
 	}
 
 	public void clickOnExpenseDeleteConfirmMessage() {
-		actionUtil.clickElement(driver, expenseConfirmDeleteMsg);
-		actionUtil.clickElement(driver, expenseConfirmDeleteOkButton);
+		actionUtil.clickElement(expenseConfirmDeleteMsg);
+		actionUtil.clickElement(expenseConfirmDeleteOkButton);
 	}
 
 	public void clickOnExpenseDeleteOkConfirmMessage() {
-		actionUtil.clickElement(driver, expenseConfirmDeleteOkButton);
+		actionUtil.clickElement(expenseConfirmDeleteOkButton);
 	}
 	
 	public void closeTheWindow() {

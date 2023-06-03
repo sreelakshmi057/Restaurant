@@ -54,9 +54,9 @@ public class CustomerPage {
 	private WebElement customerConfirmDeleteMsg;
 
 	public void clickOnAddCustomerButton() {
-		actionUtil.clickElement(driver, addCustomerButton);
+		actionUtil.clickElement(addCustomerButton);
 		waitUtil.waitForElementTobeClickable(driver, customerName, 15);
-		actionUtil.clickElement(driver, customerName);
+		actionUtil.clickElement(customerName);
 	}
 
 	/**
@@ -86,27 +86,27 @@ public class CustomerPage {
 	 * @param value
 	 */
 	public void enterValueToCustomerName(String value) {
-		actionUtil.clearText(driver, customerName);
+		actionUtil.clearText(customerName);
 		actionUtil.enterValue(driver, customerName, value);
 	}
 
 	public void enterValueToCustomerPhone(String value) {
-		actionUtil.clearText(driver, customerPhone);
+		actionUtil.clearText(customerPhone);
 		actionUtil.enterValue(driver, customerPhone, value);
 	}
 
 	public void enterValueToCustomerEmail(String value) {
-		actionUtil.clearText(driver, customerEmail);
+		actionUtil.clearText(customerEmail);
 		actionUtil.enterValue(driver, customerEmail, value);
 	}
 
 	public void enterValueToCustomerDiscount(String value) {
-		actionUtil.clearText(driver, customerDiscount);
+		actionUtil.clearText(customerDiscount);
 		actionUtil.enterValue(driver, customerDiscount, value);
 	}
 
 	public void clickOnCustomerSubmitButton() {
-		actionUtil.clickElement(driver, customerSubmitButton);
+		actionUtil.clickElement(customerSubmitButton);
 		waitUtil.waitForElementTobeClickable(driver, customerPhone_SearchResult, 20);
 	}
 
@@ -117,7 +117,7 @@ public class CustomerPage {
 	 */
 	public void searchForCustomerValue(String value) {
 		waitUtil.waitForElementTobeClickable(driver, customerSearch, 15);
-		actionUtil.clickElement(driver, customerSearch);
+		actionUtil.clickElement(customerSearch);
 		actionUtil.enterValue(driver, customerSearch, value);
 		waitUtil.waitForVisibilityOfElement(driver, customerdelete_SearchResult, 15);
 	}
@@ -150,12 +150,12 @@ public class CustomerPage {
 	 */
 
 	public void clickOnCustomerEditIcon() {
-		actionUtil.clickElement(driver, customerEditButton);
+		actionUtil.clickElement(customerEditButton);
 	}
 
 	public void clickOnCustomerEditSubmitButton() {
 		waitUtil.waitForElementTobeClickable(driver, customerEditSubmitButton, 10);
-		actionUtil.clickElement(driver, customerEditSubmitButton);
+		actionUtil.clickElement(customerEditSubmitButton);
 	}
 
 	/**
@@ -163,11 +163,11 @@ public class CustomerPage {
 	 * 
 	 */
 	public void clickOnCustomerDeleteIcon() {
-		actionUtil.clickElement(driver, customerDeleteButton);
+		actionUtil.clickElement(customerDeleteButton);
 	}
 
 	public void clickOnCustomerDeleteConfirmMessage() {
-		actionUtil.clickElement(driver, customerConfirmDeleteMsg);
+		actionUtil.clickElement(customerConfirmDeleteMsg);
 	}
 	
 	public void closeTheWindow() {

@@ -45,9 +45,9 @@ public class ExpenseInCategoriesPage {
 	private WebElement expenseConfirmDeleteMsg;
 
 	public void clickOnAddExpenseCategoryButton() {
-		actionUtil.clickElement(driver, addExpenseCategoryButton);
+		actionUtil.clickElement(addExpenseCategoryButton);
 		waitUtil.waitForElementTobeClickable(driver, expenseCategoryName, 15);
-		actionUtil.clickElement(driver, expenseCategoryName);
+		actionUtil.clickElement(expenseCategoryName);
 	}
 
 	/**
@@ -67,13 +67,13 @@ public class ExpenseInCategoriesPage {
 	 */
 
 	public void enterValueToCategoryName(String value) {
-		actionUtil.clearText(driver, expenseCategoryName);
+		actionUtil.clearText(expenseCategoryName);
 		actionUtil.enterValue(driver, expenseCategoryName, value);
 	}
 
 	public void clickOnCategorySubmitButton() {
-		actionUtil.clickElement(driver, expenseSubmitButton);
-		actionUtil.clickElement(driver, expenseSubmitButton);
+		actionUtil.clickElement(expenseSubmitButton);
+		actionUtil.clickElement(expenseSubmitButton);
 	}
 
 	/**
@@ -84,8 +84,8 @@ public class ExpenseInCategoriesPage {
 
 	public void searchForCategoryProductValue(String value) {
 		waitUtil.waitForElementTobeClickable(driver, expenseSearch, 5);
-		actionUtil.clearText(driver, expenseSearch);
-		actionUtil.clickElement(driver, expenseSearch);
+		actionUtil.clearText(expenseSearch);
+		actionUtil.clickElement(expenseSearch);
 		actionUtil.enterValue(driver, expenseSearch, value);
 		waitUtil.waitForVisibilityOfElement(driver, categoryName_SearchResult, 20);
 	}
@@ -108,12 +108,12 @@ public class ExpenseInCategoriesPage {
 	 */
 
 	public void clickOnProductEditIcon() {
-		actionUtil.clickElement(driver, expenseEditButton);
+		actionUtil.clickElement(expenseEditButton);
 	}
 
 	public void clickOnProductEditSubmitButton() {
 		waitUtil.waitForElementTobeClickable(driver, expenseEditSubmitButton, 10);
-		actionUtil.clickElement(driver, expenseEditSubmitButton);
+		actionUtil.clickElement(expenseEditSubmitButton);
 	}
 
 	/**
@@ -121,11 +121,11 @@ public class ExpenseInCategoriesPage {
 	 * 
 	 */
 	public void clickOnProductDeleteIcon() {
-		actionUtil.clickElement(driver, expenseDeleteButton);
+		actionUtil.clickElement(expenseDeleteButton);
 	}
 
 	public void clickOnProductDeleteConfirmMessage() {
-		actionUtil.clickElement(driver, expenseConfirmDeleteMsg);
+		actionUtil.clickElement(expenseConfirmDeleteMsg);
 	}
 	
 	public void closeTheWindow() {

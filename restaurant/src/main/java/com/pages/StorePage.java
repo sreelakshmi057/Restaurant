@@ -61,34 +61,34 @@ public class StorePage {
 	private WebElement storeEditSubmitButton;
 
 	public void clickOnAddStoreButton() {
-		actionUtil.clickElement(driver, addStoreButton);
+		actionUtil.clickElement(addStoreButton);
 		waitUtil.waitForElementTobeClickable(driver, storeName, 20);
-		actionUtil.clickElement(driver, storeName);
+		actionUtil.clickElement(storeName);
 	}
 
 	public void enterValueToStoreName(String value) {
-		actionUtil.clearText(driver, storeName);
+		actionUtil.clearText(storeName);
 		actionUtil.enterValue(driver, storeName, value);
 	}
 
 	public void enterValueToStoreMail(String value) {
-		actionUtil.clearText(driver, storeEmail);
+		actionUtil.clearText(storeEmail);
 		actionUtil.enterValue(driver, storeEmail, value);
 		waitUtil.waitForElementTobeClickable(driver, storeEditSubmitButton, 20);
 	}
 
 	public void enterValueToStoreNumber(String value) {
-		actionUtil.clearText(driver, storePhone);
+		actionUtil.clearText(storePhone);
 		actionUtil.enterValue(driver, storePhone, value);
 	}
 
 	public void enterValueToStoreCountryName(String value) {
-		actionUtil.clearText(driver, storeCountry);
+		actionUtil.clearText(storeCountry);
 		actionUtil.enterValue(driver, storeCountry, value);
 	}
 
 	public void enterValueToStoreCityName(String value) {
-		actionUtil.clearText(driver, storeCity);
+		actionUtil.clearText(storeCity);
 		actionUtil.enterValue(driver, storeCity, value);
 	}
 
@@ -101,7 +101,7 @@ public class StorePage {
 	}
 
 	public void submit() {
-		actionUtil.clickElement(driver, storeSubmitButton);
+		actionUtil.clickElement(storeSubmitButton);
 	}
 
 	public void implementImplicitWait() {
@@ -140,7 +140,7 @@ public class StorePage {
 	 */
 	public void searchForStoreValue(String value) {
 		waitUtil.waitForElementTobeClickable(driver, storeSearch, 10);
-		actionUtil.clickElement(driver, storeSearch);
+		actionUtil.clickElement(storeSearch);
 		actionUtil.enterValue(driver, storeSearch, value);
 		waitUtil.waitForVisibilityOfElement(driver, storeName_searchResult, 20);
 	}
@@ -180,11 +180,11 @@ public class StorePage {
 	 */
 
 	public void clickOnEditIcon() {
-		actionUtil.clickElement(driver, storeEditButton);
+		actionUtil.clickElement(storeEditButton);
 	}
 
 	public void clickOnEditSubmitButton() {
-		actionUtil.clickElement(driver, storeEditSubmitButton);
+		actionUtil.clickElement(storeEditSubmitButton);
 	}
 
 	/**
@@ -192,7 +192,7 @@ public class StorePage {
 	 * 
 	 */
 	public void clickOnDeleteIcon() {
-		actionUtil.clickElement(driver, storeDeleteButton);
+		actionUtil.clickElement(storeDeleteButton);
 	}
 
 	public String getTheSearchResultOfDeletedEntry() {

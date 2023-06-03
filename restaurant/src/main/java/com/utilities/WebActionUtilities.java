@@ -125,7 +125,7 @@ public class WebActionUtilities {
 	 * @param driver
 	 * @param element
 	 */
-	public void clearText(WebDriver driver, WebElement element) {
+	public void clearText(WebElement element) {
 		try {
 			element.clear();
 		} catch (Exception e) {
@@ -156,7 +156,7 @@ public class WebActionUtilities {
 	 * @param driver
 	 * @param element
 	 */
-	public void clickElement(WebDriver driver, WebElement element) {
+	public void clickElement(WebElement element) {
 		try {
 			element.click();
 		} catch (Exception e) {

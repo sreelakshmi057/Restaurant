@@ -45,9 +45,9 @@ public class ProductInCategoriesPage {
 	private WebElement categoryConfirmDeleteMsg;
 
 	public void clickOnAddCategoryButton() {
-		actionUtil.clickElement(driver, addCategoryButton);
+		actionUtil.clickElement(addCategoryButton);
 		waitUtil.waitForElementTobeClickable(driver, categoryName, 15);
-		actionUtil.clickElement(driver, categoryName);
+		actionUtil.clickElement(categoryName);
 	}
 
 	/**
@@ -67,15 +67,15 @@ public class ProductInCategoriesPage {
 	 */
 
 	public void enterValueToCategoryName(String value) {
-		actionUtil.clearText(driver, categoryName);
+		actionUtil.clearText(categoryName);
 		actionUtil.enterValue(driver, categoryName, value);
 		waitUtil.waitForElementTobeClickable(driver, categorySubmitButton, 20);
 	}
 
 	public void clickOnCategorySubmitButton() {
-		actionUtil.clickElement(driver, categorySubmitButton);
+		actionUtil.clickElement(categorySubmitButton);
 		// waitUtil.waitForElementTobeClickable(driver, categorySubmitButton, 5);
-		actionUtil.clickElement(driver, categorySubmitButton);
+		actionUtil.clickElement(categorySubmitButton);
 	}
 
 	/**
@@ -86,8 +86,8 @@ public class ProductInCategoriesPage {
 
 	public void searchForCategoryProductValue(String value) {
 		waitUtil.waitForElementTobeClickable(driver, categorySearch, 5);
-		actionUtil.clearText(driver, categorySearch);
-		actionUtil.clickElement(driver, categorySearch);
+		actionUtil.clearText(categorySearch);
+		actionUtil.clickElement(categorySearch);
 		actionUtil.enterValue(driver, categorySearch, value);
 	}
 
@@ -109,12 +109,12 @@ public class ProductInCategoriesPage {
 	 */
 
 	public void clickOnProductEditIcon() {
-		actionUtil.clickElement(driver, categoryEditButton);
+		actionUtil.clickElement(categoryEditButton);
 	}
 
 	public void clickOnProductEditSubmitButton() {
 		waitUtil.waitForElementTobeClickable(driver, categoryEditSubmitButton, 10);
-		actionUtil.clickElement(driver, categoryEditSubmitButton);
+		actionUtil.clickElement(categoryEditSubmitButton);
 	}
 
 	/**
@@ -122,11 +122,11 @@ public class ProductInCategoriesPage {
 	 * 
 	 */
 	public void clickOnProductDeleteIcon() {
-		actionUtil.clickElement(driver, categoryDeleteButton);
+		actionUtil.clickElement(categoryDeleteButton);
 	}
 
 	public void clickOnProductDeleteConfirmMessage() {
-		actionUtil.clickElement(driver, categoryConfirmDeleteMsg);
+		actionUtil.clickElement(categoryConfirmDeleteMsg);
 	}
 	
 	public void closeTheWindow() {

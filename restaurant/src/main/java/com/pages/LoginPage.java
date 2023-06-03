@@ -36,7 +36,7 @@ public class LoginPage {
 	}
 
 	public void clickLoginButton() {
-		actionUtil.clickElement(driver, loginButton);
+		actionUtil.clickElement(loginButton);
 	}
 
 	public void performLogin(String username, String password) {

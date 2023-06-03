@@ -129,63 +129,63 @@ public class HomePage {
 	 */
 
 	public ProductPage navigateToProductPage() {
-		actionUtil.clickElement(driver, productLink);
+		actionUtil.clickElement(productLink);
 		return new ProductPage(driver);
 	}
 
 	public StorePage navigateToStorePage() {
-		actionUtil.clickElement(driver, storeLink);
+		actionUtil.clickElement(storeLink);
 		return new StorePage(driver);
 	}
 
 	public WaiterPage navigateToWaiterInPeopleLink() {
-		actionUtil.clickElement(driver, peopleLink);
-		actionUtil.clickElement(driver, waiterPeopleLink);
+		actionUtil.clickElement(peopleLink);
+		actionUtil.clickElement(waiterPeopleLink);
 		return new WaiterPage(driver);
 	}
 
 	public CustomerPage navigateToCustomersInPeopleLink() {
-		actionUtil.clickElement(driver, peopleLink);
-		actionUtil.clickElement(driver, customersPeopleLink);
+		actionUtil.clickElement(peopleLink);
+		actionUtil.clickElement(customersPeopleLink);
 		return new CustomerPage(driver);
 	}
 
 	public SupplierPage navigateToSuppliersInPeopleLink() {
-		actionUtil.clickElement(driver, peopleLink);
-		actionUtil.clickElement(driver, suppliersPeopleLink);
+		actionUtil.clickElement(peopleLink);
+		actionUtil.clickElement(suppliersPeopleLink);
 		return new SupplierPage(driver);
 	}
 
 	public ExpensePage navigateToExpensePage() {
-		actionUtil.clickElement(driver, expenseLink);
+		actionUtil.clickElement(expenseLink);
 		return new ExpensePage(driver);
 	}
 
 	public ProductInCategoriesPage navigateToProductInCategoriesPage() {
-		actionUtil.clickElement(driver, categoriesLink);
-		actionUtil.clickElement(driver, productCategoriesLink);
+		actionUtil.clickElement(categoriesLink);
+		actionUtil.clickElement(productCategoriesLink);
 		return new ProductInCategoriesPage(driver);
 	}
 
 	public ExpenseInCategoriesPage navigateToExpenseInCategoriesPage() {
-		actionUtil.clickElement(driver, categoriesLink);
-		actionUtil.clickElement(driver, expenseCategoriesLink);
+		actionUtil.clickElement(categoriesLink);
+		actionUtil.clickElement(expenseCategoriesLink);
 		return new ExpenseInCategoriesPage(driver);
 	}
 
 	public SettingsPage navigateToSettingsPage() {
-		actionUtil.clickElement(driver, settingsLink);
+		actionUtil.clickElement(settingsLink);
 		return new SettingsPage(driver);
 	}
 
 	public LogoutPage navigateToLogoutPage() {
-		actionUtil.clickElement(driver, logOut);
+		actionUtil.clickElement(logOut);
 		return new LogoutPage(driver);
 	}
 
 	public UsersPage navigateToUsersPage() {
-		actionUtil.clickElement(driver, settingsLink);
-		actionUtil.clickElement(driver, usersButton);
+		actionUtil.clickElement(settingsLink);
+		actionUtil.clickElement(usersButton);
 		return new UsersPage(driver);
 	}
 	

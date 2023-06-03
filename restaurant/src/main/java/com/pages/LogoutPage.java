@@ -27,7 +27,7 @@ public class LogoutPage {
 	private WebElement loginButton;
 
 	public void clickOnLogout() {
-		actionUtil.clickElement(driver, logOut);
+		actionUtil.clickElement(logOut);
 		waitUtil.waitForElementTobeClickable(driver, loginButton, 15);
 	}
 

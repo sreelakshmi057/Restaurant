@@ -50,57 +50,57 @@ public class SettingsPage {
 
 	public void clickOnCompanyName() {
 		waitUtil.waitForElementTobeClickable(driver, CompanyName, 15);
-		actionUtil.clickElement(driver, CompanyName);
+		actionUtil.clickElement(CompanyName);
 	}
 
 	public void enterValueToCompanyName(String company_Name) {
-		actionUtil.clearText(driver, CompanyName);
+		actionUtil.clearText(CompanyName);
 		actionUtil.enterValue(driver, CompanyName, company_Name);
 	}
 
 	public void enterValueToCompanyPhone(String company_Phone) {
-		actionUtil.clearText(driver, companyPhone);
+		actionUtil.clearText(companyPhone);
 		actionUtil.enterValue(driver, companyPhone, company_Phone);
 	}
 
 	public void enterValueToDefaultDiscount(String discount) {
-		actionUtil.clearText(driver, defaultDiscount);
+		actionUtil.clearText(defaultDiscount);
 		actionUtil.enterValue(driver, defaultDiscount, discount);
 	}
 
 	public void enterValueToDefaultTax(String tax) {
-		actionUtil.clearText(driver, defaultTax);
+		actionUtil.clearText(defaultTax);
 		actionUtil.enterValue(driver, defaultTax, tax);
 	}
 
 	public void enterValueToCurrencyCode(String code) {
-		actionUtil.clearText(driver, currencyCode);
+		actionUtil.clearText(currencyCode);
 		actionUtil.enterValue(driver, currencyCode, code);
 	}
 
 	public String enterValueToReceiptHeader() {
-		actionUtil.clearText(driver, descriptionHeader);
+		actionUtil.clearText(descriptionHeader);
 		String header = genericUtil.generateAlphabeticData(7);
 		actionUtil.enterValue(driver, descriptionHeader, header);
 		return header;
 	}
 
 	public String enterValueToReceiptFooter() {
-		actionUtil.clearText(driver, descriptionFooter);
+		actionUtil.clearText(descriptionFooter);
 		String footer = genericUtil.generateAlphabeticData(8);
 		actionUtil.enterValue(driver, descriptionFooter, footer);
 	    return footer;
 	}
 
 	public String enterValueToStripeKey() {
-		actionUtil.clearText(driver, stripeKey);
+		actionUtil.clearText(stripeKey);
 		String key = genericUtil.generateAlphaNumericData(5);
 		actionUtil.enterValue(driver, stripeKey, key);
 		return key;
 	}
 
 	public String enterValueToStripePublishedKey() {
-		actionUtil.clearText(driver, stripePublishableKey);
+		actionUtil.clearText(stripePublishableKey);
 		String publishedKey = genericUtil.generateAlphaNumericData(5);
 		actionUtil.enterValue(driver, stripePublishableKey, publishedKey);
 		return publishedKey;
@@ -108,7 +108,7 @@ public class SettingsPage {
 
 	public void clickOnSubmitButton() {
 		waitUtil.waitForElementTobeClickable(driver, submitButton, 15);
-		actionUtil.clickElement(driver, submitButton);
+		actionUtil.clickElement(submitButton);
 	}
 
 	/**
@@ -177,7 +177,7 @@ public class SettingsPage {
 	 * @param value
 	 */
 	public void selectNumberOfDecimalsByIndex(int value) {
-		actionUtil.clearText(driver, rounding);
+		actionUtil.clearText(rounding);
 		genericUtil.SelectElementByIndex(driver, rounding, value);
 	}
 

@@ -57,7 +57,7 @@ public class SupplierPage {
 	private WebElement supplierConfirmDeleteMsg;
 
 	public void clickOnAddSupplierButton() {
-		actionUtil.clickElement(driver, addSupplierButton);
+		actionUtil.clickElement(addSupplierButton);
 		waitUtil.waitForElementTobeClickable(driver, supplierName, 15);
 	}
 
@@ -88,28 +88,28 @@ public class SupplierPage {
 	 * @param value
 	 */
 	public void enterValueToSupplierName(String value) {
-		actionUtil.clearText(driver, supplierName);
+		actionUtil.clearText(supplierName);
 		actionUtil.enterValue(driver, supplierName, value);
 	}
 
 	public void enterValueToSupplierPhone(String value) {
-		actionUtil.clearText(driver, supplierPhone);
+		actionUtil.clearText(supplierPhone);
 		actionUtil.enterValue(driver, supplierPhone, value);
 	}
 
 	public void enterValueToSupplierEmail(String value) {
-		actionUtil.clearText(driver, supplierEmail);
+		actionUtil.clearText(supplierEmail);
 		actionUtil.enterValue(driver, supplierEmail, value);
 	}
 
 	public void enterValueToSupplierDescription(String value) {
-		actionUtil.clearText(driver, supplierDescription);
+		actionUtil.clearText(supplierDescription);
 		actionUtil.enterValue(driver, supplierDescription, value);
 	}
 
 	public void clickOnSupplierSubmitButton() {
 		waitUtil.waitForElementTobeClickable(driver, supplierSubmitButton, 5);
-		actionUtil.clickElement(driver, supplierSubmitButton);
+		actionUtil.clickElement(supplierSubmitButton);
 	}
 
 	/**
@@ -119,7 +119,7 @@ public class SupplierPage {
 	 */
 	public void searchForStoreValue(String value) {
 		waitUtil.waitForElementTobeClickable(driver, supplierSearchtab, 5);
-		actionUtil.clickElement(driver, supplierSearchtab);
+		actionUtil.clickElement(supplierSearchtab);
 		actionUtil.enterValue(driver, supplierSearchtab, value);
 	}
 
@@ -148,12 +148,12 @@ public class SupplierPage {
 	 * 
 	 */
 	public void clickOnSupplierEditIcon() {
-		actionUtil.clickElement(driver, supplierEditButton);
+		actionUtil.clickElement(supplierEditButton);
 	}
 
 	public void clickOnSupplierEditSubmitButton() {
 		waitUtil.waitForElementTobeClickable(driver, supplierEditSubmitButton, 10);
-		actionUtil.clickElement(driver, supplierEditSubmitButton);
+		actionUtil.clickElement(supplierEditSubmitButton);
 	}
 
 	/**
@@ -161,11 +161,11 @@ public class SupplierPage {
 	 * 
 	 */
 	public void clickOnSupplierDeleteIcon() {
-		actionUtil.clickElement(driver, supplierDeleteButton);
+		actionUtil.clickElement(supplierDeleteButton);
 	}
 
 	public void clickOnSupplierDeleteConfirmMessage() {
-		actionUtil.clickElement(driver, supplierConfirmDeleteMsg);
+		actionUtil.clickElement(supplierConfirmDeleteMsg);
 	}
 	
 	public void closeTheWindow() {

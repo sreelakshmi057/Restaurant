@@ -50,43 +50,43 @@ public class UsersPage {
 	private WebElement role_searchResult;
 
 	public void clickOnAddUsers() {
-		actionUtil.clickElement(driver, usersButton);
+		actionUtil.clickElement( usersButton);
 		waitUtil.waitForElementTobeClickable(driver, addUser, 20);
-		actionUtil.clickElement(driver, addUser);
+		actionUtil.clickElement(addUser);
 		waitUtil.waitForElementTobeClickable(driver, userName, 20);
 	}
 
 	public void enterValueToUserName(String value) {
-		actionUtil.clearText(driver, userName);
+		actionUtil.clearText(userName);
 		actionUtil.enterValue(driver, userName, value);
 	}
 
 	public void enterValueToFirstName(String value) {
-		actionUtil.clearText(driver, firstName);
+		actionUtil.clearText(firstName);
 		actionUtil.enterValue(driver, firstName, value);
 	}
 
 	public void clickOnRadioButton() {
-		actionUtil.clickElement(driver, radioButtonAdmin);
+		actionUtil.clickElement(radioButtonAdmin);
 	}
 
 	public void enterValueToEmail(String value) {
-		actionUtil.clearText(driver, email);
+		actionUtil.clearText(email);
 		actionUtil.enterValue(driver, email, value);
 	}
 
 	public void enterValueToPassword(String value) {
-		actionUtil.clearText(driver, password);
+		actionUtil.clearText(password);
 		actionUtil.enterValue(driver, password, value);
 	}
 
 	public void enterValueToConfirmPassword(String value) {
-		actionUtil.clearText(driver, repeatPassword);
+		actionUtil.clearText(repeatPassword);
 		actionUtil.enterValue(driver, repeatPassword, value);
 	}
 
 	public void clickOnSubmit() {
-		actionUtil.clickElement(driver, submit);
+		actionUtil.clickElement(submit);
 		waitUtil.waitForVisibilityOfElement(driver, userName, 10);
 	}
 

@@ -57,7 +57,7 @@ public class WaiterPage {
 	private WebElement waiterConfirmDeleteMsg;
 
 	public void clickOnAddWaiterButton() {
-		actionUtil.clickElement(driver, addWaiterButton);
+		actionUtil.clickElement(addWaiterButton);
 		waitUtil.waitForElementTobeClickable(driver, waiterName, 25);
 	}
 
@@ -88,17 +88,17 @@ public class WaiterPage {
 	 * @param value
 	 */
 	public void enterValueToWaiterName(String value) {
-		actionUtil.clearText(driver, waiterName);
+		actionUtil.clearText(waiterName);
 		actionUtil.enterValue(driver, waiterName, value);
 	}
 
 	public void enterValueToWaiterPhone(String value) {
-		actionUtil.clearText(driver, waiterPhone);
+		actionUtil.clearText(waiterPhone);
 		actionUtil.enterValue(driver, waiterPhone, value);
 	}
 
 	public void enterValueToWaiterEmail(String value) {
-		actionUtil.clearText(driver, waiterEmail);
+		actionUtil.clearText(waiterEmail);
 		actionUtil.enterValue(driver, waiterEmail, value);
 	}
 
@@ -108,13 +108,13 @@ public class WaiterPage {
 	 * @param value
 	 */
 	public void selectWaiterStoreByVisibleText(String value) {
-		actionUtil.clearText(driver, waiterStore);
+		actionUtil.clearText(waiterStore);
 		genericUtil.SelectElementByVisibleText(driver, waiterStore, value);
 	}
 
 	public void clickOnwaiterSubmitButton() {
 		waitUtil.waitForElementTobeClickable(driver, waiterSubmitButton, 15);
-		actionUtil.clickElement(driver, waiterSubmitButton);
+		actionUtil.clickElement(waiterSubmitButton);
 		waitUtil.waitForVisibilityOfElement(driver, waiterPhone_SearchResult, 15);
 	}
 
@@ -125,7 +125,7 @@ public class WaiterPage {
 	 */
 	public void searchForStoreValue(String value) {
 		waitUtil.waitForElementTobeClickable(driver, waiterSearch, 10);
-		actionUtil.clickElement(driver, waiterSearch);
+		actionUtil.clickElement(waiterSearch);
 		actionUtil.enterValue(driver, waiterSearch, value);
 	}
 
@@ -159,12 +159,12 @@ public class WaiterPage {
 	 */
 
 	public void clickOnWaiterEditIcon() {
-		actionUtil.clickElement(driver, waiterEditButton);
+		actionUtil.clickElement(waiterEditButton);
 	}
 
 	public void clickOnWaiterEditSubmitButton() {
 		waitUtil.waitForElementTobeClickable(driver, waiterEditSubmitButton, 10);
-		actionUtil.clickElement(driver, waiterEditSubmitButton);
+		actionUtil.clickElement(waiterEditSubmitButton);
 	}
 
 	/**
@@ -172,11 +172,11 @@ public class WaiterPage {
 	 * 
 	 */
 	public void clickOnWaiterDeleteIcon() {
-		actionUtil.clickElement(driver, waiterDeleteButton);
+		actionUtil.clickElement(waiterDeleteButton);
 	}
 
 	public void clickOnWaiterDeleteConfirmMessage() {
-		actionUtil.clickElement(driver, waiterConfirmDeleteMsg);
+		actionUtil.clickElement(waiterConfirmDeleteMsg);
 	}
 	
 	public void closeTheWindow() {

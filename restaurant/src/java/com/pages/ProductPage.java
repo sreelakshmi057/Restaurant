@@ -8,7 +8,6 @@ import org.openqa.selenium.support.PageFactory;
 import com.utilities.GenericUtilities;
 import com.utilities.WaitUtilities;
 import com.utilities.WebActionUtilities;
-import com.utilities.WebbrowserUtilities;
 
 public class ProductPage {
 
@@ -16,7 +15,6 @@ public class ProductPage {
 	WebActionUtilities actionUtil = new WebActionUtilities();
 	WaitUtilities waitUtil = new WaitUtilities();
 	GenericUtilities genericUtil = new GenericUtilities();
-	WebbrowserUtilities brwsrUtil= new WebbrowserUtilities();
 
 	public ProductPage(WebDriver driver) {
 		this.driver = driver;
@@ -55,6 +53,7 @@ public class ProductPage {
 	private WebElement productSubmitButton;
 	@FindBy(xpath = "//body/div[@id='stock']/div[@id='stockModal']/div[1]/div[3]/button[2]")
 	private WebElement productStockSubmitButton;
+
 	@FindBy(xpath = "(//table[@id='Table']//tr//td)[1]")
 	private WebElement productCode_SearchResult;
 	@FindBy(xpath = "(//table[@id='Table']//tr//td)[2]")
@@ -71,6 +70,7 @@ public class ProductPage {
 	private WebElement productSearchButton;
 	@FindBy(xpath = "(//table[@id='Table']//tr//td)[1]")
 	private WebElement delete_SearchResult;
+
 	@FindBy(xpath = "(//a[@class='btn btn-default'])[3]")
 	private WebElement productEditButton;
 	@FindBy(xpath = "(//a[@class='btn btn-default'])[1]")
@@ -81,9 +81,9 @@ public class ProductPage {
 	private WebElement productConfirmDeleteMsg;
 
 	public void clickOnAddProductButton() {
-		actionUtil.clickElement(addProductButton);
+		actionUtil.clickElement(driver, addProductButton);
 		waitUtil.waitForElementTobeClickable(driver, productType, 15);
-		actionUtil.clickElement(productType);
+		actionUtil.clickElement(driver, productType);
 	}
 
 	public void implementImplicitWait() {
@@ -168,74 +168,74 @@ public class ProductPage {
 	 */
 
 	public void selectProductType(int index) {
-		actionUtil.clearText(productType);
+		actionUtil.clearText(driver, productType);
 		genericUtil.SelectElementByIndex(driver, productType, index);
 	}
 
 	public void enterValueToProductCode(String value) {
-		actionUtil.clearText(productCode);
+		actionUtil.clearText(driver, productCode);
 		actionUtil.enterValue(driver, productCode, value);
 	}
 
 	public void enterValueToProductName(String value) {
-		actionUtil.clearText(productName);
+		actionUtil.clearText(driver, productName);
 		actionUtil.enterValue(driver, productName, value);
 	}
 
 	public void selectProductCategory(int index) {
-		actionUtil.clearText(productCategory);
+		actionUtil.clearText(driver, productCategory);
 		genericUtil.SelectElementByIndex(driver, productCategory, index);
 	}
 
 	public void selectProductSupplier(int index) {
-		actionUtil.clearText(productSupplier);
+		actionUtil.clearText(driver, productSupplier);
 		genericUtil.SelectElementByIndex(driver, productSupplier, index);
 	}
 
 	public void enterValueToProductPurchasePrice(String value) {
-		actionUtil.clearText(productPurchasePrice);
+		actionUtil.clearText(driver, productPurchasePrice);
 		actionUtil.enterValue(driver, productPurchasePrice, value);
 	}
 
 	public void enterValueToProductTax(String value) {
-		actionUtil.clearText(productTax);
+		actionUtil.clearText(driver, productTax);
 		actionUtil.enterValue(driver, productTax, value);
 	}
 
 	public void selectProductTaxMethod(int index) {
-		actionUtil.clearText(productTaxMethod);
+		actionUtil.clearText(driver, productTaxMethod);
 		genericUtil.SelectElementByIndex(driver, productTaxMethod, index);
 	}
 
 	public void enterValueToProductPrice(String value) {
-		actionUtil.clearText(productPrice);
+		actionUtil.clearText(driver, productPrice);
 		actionUtil.enterValue(driver, productPrice, value);
 	}
 
 	public void enterValueToProductUnit(String value) {
-		actionUtil.clearText(productUnit);
+		actionUtil.clearText(driver, productUnit);
 		actionUtil.enterValue(driver, productUnit, value);
 	}
 
 	public void enterValueToProductAlertQuantity(String value) {
-		actionUtil.clearText(productAlertQuantity);
+		actionUtil.clearText(driver, productAlertQuantity);
 		actionUtil.enterValue(driver, productAlertQuantity, value);
 	}
 
 	public void enterValueToProductOptions(String value) {
-		actionUtil.clearText(productOptions);
+		actionUtil.clearText(driver, productOptions);
 		actionUtil.enterValue(driver, productOptions, value);
 	}
 
 	public void enterValueToProductDescription(String value) {
-		actionUtil.clearText(productDescription);
+		actionUtil.clearText(driver, productDescription);
 		actionUtil.enterValue(driver, productDescription, value);
 	}
 
 	public void clickOnProductSubmitButton() {
-		actionUtil.clickElement(productSubmitButton);
+		actionUtil.clickElement(driver, productSubmitButton);
 		waitUtil.waitForElementTobeClickable(driver, productStockSubmitButton, 15);
-		actionUtil.clickElement(productStockSubmitButton);
+		actionUtil.clickElement(driver, productStockSubmitButton);
 	}
 
 	/**
@@ -245,7 +245,7 @@ public class ProductPage {
 	 */
 
 	public void searchForProductValue(String value) {
-		actionUtil.clickElement(productSearchButton);
+		actionUtil.clickElement(driver, productSearchButton);
 		waitUtil.waitForElementTobeClickable(driver, productSearchButton, 5);
 		actionUtil.enterValue(driver, productSearchButton, value);
 		waitUtil.waitForVisibilityOfElement(driver, productCode_SearchResult, 20);
@@ -289,12 +289,12 @@ public class ProductPage {
 	 */
 
 	public void clickOnProductEditIcon() {
-		actionUtil.clickElement(productEditButton);
+		actionUtil.clickElement(driver, productEditButton);
 	}
 
 	public void clickOnProductEditSubmitButton() {
 		waitUtil.waitForElementTobeClickable(driver, productEditSubmitButton, 10);
-		actionUtil.clickElement(productEditSubmitButton);
+		actionUtil.clickElement(driver, productEditSubmitButton);
 	}
 
 	/**
@@ -302,15 +302,11 @@ public class ProductPage {
 	 * 
 	 */
 	public void clickOnProductDeleteIcon() {
-		actionUtil.clickElement(productDeleteButton);
+		actionUtil.clickElement(driver, productDeleteButton);
 	}
 
 	public void clickOnProductDeleteConfirmMessage() {
-		actionUtil.clickElement(productConfirmDeleteMsg);
-	}
-	
-	public void closeTheWindow() {
-		brwsrUtil.browserQuitPage(driver);
+		actionUtil.clickElement(driver, productConfirmDeleteMsg);
 	}
 
 }
